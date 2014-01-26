@@ -6,6 +6,7 @@ class HomeController < ApplicationController
 
   def create
     @message = Message.new(params[:message])
+    @galleries = Gallery.all
     
     if @message.valid?
       NotificationsMailer.new_message(@message).deliver
