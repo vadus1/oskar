@@ -51,12 +51,4 @@ namespace :deploy do
     end
   end
   before "deploy", "deploy:check_revision"
-
-  before "deploy:symlink", "assets:precompile"
-  namespace :assets do
-    desc "Compile assets"
-    task :precompile, :roles => :app do
-      run "cd #{release_path} && rake RAILS_ENV=#{rails_env} assets:precompile"
-    end
-  end
 end
