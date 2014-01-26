@@ -1,0 +1,130 @@
+/ start: header
+.header-wrap
+  %header.clearfix
+    .img-circle
+      %img.decore-top{:alt => "", :src => "#{asset_path('decor-1.png')}"}
+        %h1 Wedding agency
+        %h3 Oskar
+        %h4 On November, Saturday, 21, 2014
+        %img.decore-bottom{:alt => "", :src => "#{asset_path('decor-3.png')}"}
+    / <img class="logo" src="assets/img/logo3.png">
+/ end: header
+
+/ start: welcome
+.welcome-wrap
+  .container
+    %h2 Welcome to our site.
+/ end: welcome
+
+/ start: about us
+.about-us
+  %a#about
+  .container
+    .page-header
+      %h1 About Us
+    %h2.slogan Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor consectetur.
+    .row-fluid
+      .span4
+        %h3 About Mary
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis, mi non sollicitudin dapibus, turpis nunc suscipit lorem.
+        %p
+          Vestibulum pellentesque, leo eget gravida convallis, nunc nulla tempus leo, in pharetra dui purus quis ligula. Fusce eu odio neque.
+          Curabitur nec purus sit amet tortor bibendum interdum a eu eros.
+      .span4.image-span
+        .image-inner
+          = image_tag('image4.jpg', class: "img-circle")
+      .span4
+        %h3 About Troy
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis, mi non sollicitudin dapibus, turpis nunc suscipit lorem.
+        %p
+          Vestibulum pellentesque, leo eget gravida convallis, nunc nulla tempus leo, in pharetra dui purus quis ligula. Fusce eu odio neque.
+          Curabitur nec purus sit amet tortor bibendum interdum a eu eros.
+/ end: about us
+%a#gallery
+.gallery-pre
+  .container
+    .page-header
+      %h1 Gallery
+    %h2.slogan Our Wedding Gallery Images
+
+.gallery
+  .container
+    %section#gallery-grid.row.thumbnails.isotope{:style => "position: relative; overflow: hidden;"}
+      - @galleries.each do |photo|
+        %article.span3.isotope-item
+          .thumbnail.hover
+            = image_tag(photo.image_url(:thumb).to_s)
+            .mask
+            .caption
+              %span.ico_block
+                %a.ico_zoom.prettyPhoto{:href => "#{photo.image.url}", :rel => 'prettyPhoto'}
+                  %span
+    / end: Gallery
+    %a#wedding
+/ start: wedding-pre
+.wedding-pre
+  .container
+    .page-header
+      %h1 Wedding Party
+    %h2.slogan Our Wedding Information
+/ end: wedding-pre
+
+/ start: wedding
+.wedding
+  .container
+    .row-fluid
+      .span6
+        %h2 Ceremony
+        %p
+          Curabitur pretium eleifend ligula in hendrerit sapien
+          %br
+            %b On November, Saturday, 21, 2014
+            at
+            %b 2:00 p.m.
+            %br
+              Cum sociis natoque penatibus et magnis dis parturient montes:
+              %br
+                %b In iaculis sem nec quam dignissim ornare.
+      .span6
+        %h2 Reception
+        %p
+          Curabitur pretium eleifend ligula, in hendrerit sapien lobortis eget.
+          Quisque egestas nunc id libero hendrerit sit amet lobortis ipsum.
+          fermentum. Curabitur sapien mauris, porttitor vitae.
+        %p Nullam eget pellentesque sapien!
+  %a#venue
+/ end: wedding
+
+/ start: contact
+.contact
+  .container
+    .page-header
+      %h1 Venue
+    %h2.slogan Ut eleifend malesuada quam vel dictum odio pellentesque sit amet.
+    .row-fluid
+      .span4.info
+        %h4 Wedding Address
+        %p
+          The Quisque Donec Inc.
+          %br 9090 Quisque Lectus, Curabitur, E11.
+        %h4 Telephone
+        %p
+          Mary: +12 345 6789 10
+          %br Troy: +12 345 6789 10
+        %h4 Residence Address
+        %p
+          The Quisque Donec Inc.
+          %br 9090 Quisque Lectus, Curabitur, E11.
+      .span8.form
+        = simple_form_for @message, :url => contact_path do |f|
+
+          %fieldset
+            .control-group
+              .controls
+                = f.input :name, required: true, placeholder: "Your Name", label: false, :input_html => { class: "span12" }
+              .controls
+                = f.input :email, required: true, placeholder: "Your Email", label: false, :input_html => { class: "span12" }
+              .controls
+                = f.input :body, as: :text, required: false, placeholder: "Your Message", label: false, :input_html => {:rows => 6, class: "span12", id: "textarea"}
+              = f.button :submit, 'Send', class: "btn btn-inverse pull-right"
+/ end: contact

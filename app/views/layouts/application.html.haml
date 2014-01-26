@@ -1,0 +1,12 @@
+!!!
+%html.csstransforms.no-csstransforms3d.csstransitions
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %title Свадебное агенство Oskar
+    = stylesheet_link_tag :application, :media => "all"
+    = javascript_include_tag :application
+    = csrf_meta_tags
+  %body#home{"data-twttr-rendered" => "true"}
+    = render 'layouts/navigations'
+    = yield

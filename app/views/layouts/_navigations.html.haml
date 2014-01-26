@@ -1,0 +1,22 @@
+/ Navigation Bar
+.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar.collapsed{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.brand{:href => "#{root_url}"}= Oskar
+      .nav-collapse.pull-right.collapse{:style => "height: 0px;"}
+        %ul#nav.nav
+          %li
+            %a{:href => "#home"} Home
+          %li
+            %a{:href => "#about"} About
+          %li
+            %a{:href => "#gallery"} Gallery
+          %li
+            %a{:href => "#wedding"} Wedding Party
+          %li
+            %a{:href => "#venue"} Venue
+      / /.nav-collapse

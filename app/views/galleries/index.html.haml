@@ -1,0 +1,18 @@
+.span12
+  .page-header
+    .pull-right
+      = link_to 'Загрузить фото', new_gallery_path, class: 'btn btn-success'
+    %h1 Фото
+
+  - if @galleries.present?
+    %table.table.table-stripped.table-hover
+      %thead
+        %tr
+          %th Фото
+      %tbody
+      - @galleries.each do |gallery|
+        %tr
+          %td= image_tag gallery.image_url(:thumb).to_s
+          %td= link_to 'Destroy', gallery, :method => :delete, :data => { :confirm => 'Are you sure?' },                      :class => 'btn btn-danger btn-small'
+  - else
+    .alert.alert-warning Нет результатов
