@@ -9,10 +9,6 @@ Bundler.require(:default, Rails.env)
 module Oskar
   class Application < Rails::Application
     config.assets.precompile += %w(application.css theme.css main.js)
-    config.assets.precompile << "images/*.png"
-    config.assets.precompile << "images/*.jpg"
-    config.assets.precompile << "images/*.jpeg"
-    config.assets.precompile << "images/*.gif"
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
