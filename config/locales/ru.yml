@@ -5,7 +5,7 @@ ru:
       models:
         message:
           attributes:
-            name:
+            email:
               blank: Вы не ввели email
             name:
               blank: Вы не ввели имя

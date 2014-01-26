@@ -81,7 +81,7 @@ Oskar::Application.configure do
         :address => "smtp.gmail.com",
         :port => 587,
         :domain => '95.85.58.135:80',
-        :user_name => "vadus.by",
+        :user_name => "vadus.by@gmail.com",
         :password => "UhkQGh2c",
         :authentication => :plain,
         :enable_starttls_auto => true
