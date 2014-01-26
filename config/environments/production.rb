@@ -75,17 +75,15 @@ Oskar::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-  config.action_mailer.default_url_options = {
-    :host => "95.85.58.135"
-  }
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { :host => "95.85.58.135" }
   config.action_mailer.smtp_settings = {
-    :address              => "smtp.gmail.com",
-    :port                 => 587,
-    :domain               => "95.85.58.135",
-    :user_name            => "vadus.by@gmail.com",
-    :password             => "UhkQGh2c",
-    :authentication       => :plain,
-    :enable_starttls_auto => true
+        :address => "smtp.gmail.com",
+        :port => 587,
+        :domain => '95.85.58.135:80',
+        :user_name => "vadus.by",
+        :password => "UhkQGh2c",
+        :authentication => :plain,
+        :enable_starttls_auto => true
   }
 end

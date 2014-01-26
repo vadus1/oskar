@@ -1,10 +1,12 @@
 ru:
   hello: "Hello world"
-  activerecord:
+  activemodel:
     errors:
       models:
         message:
           attributes:
+            name:
+              blank: Вы не ввели email
             name:
               blank: Вы не ввели имя
             body:
