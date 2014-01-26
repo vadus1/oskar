@@ -1,20 +1,4 @@
-class Message
-  include ActiveModel::Validations
-  include ActiveModel::Conversion
-  extend ActiveModel::Naming
-
-  validates_presence_of :body, :name
-  validates :email,  presence: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i  }
-
-  attr_accessor :name, :email, :body
-
-  def initialize(attributes = {})
-    attributes.each do |name, value|
-      send("#{name}=", value)
-    end
-  end
-
-  def persisted?
-    false
-  end
+class Message < ActiveRecord::Base
+  validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, message: "Не корректный emal"
+  validates :name, :email, :body, presence: true
 end
