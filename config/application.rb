@@ -8,7 +8,7 @@ Bundler.require(:default, Rails.env)
 
 module Oskar
   class Application < Rails::Application
-    config.assets.precompile += %w(application.css theme.css)
+    config.assets.precompile += %w(application.css theme.css main.js)
     config.assets.precompile << "images/*.png"
     config.assets.precompile << "images/*.jpg"
     config.assets.precompile << "images/*.jpeg"
