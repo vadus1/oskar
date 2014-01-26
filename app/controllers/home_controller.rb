@@ -5,20 +5,14 @@ class HomeController < ApplicationController
   end
 
   def create
-    @galleries = Gallery.all
-    @message = Message.new(message_params)
-
-    if @message.save
+    @message = Message.new(params[:message])
+    
+    if @message.valid?
       NotificationsMailer.new_message(@message).deliver
       redirect_to(root_path, :notice => "Message was successfully sent.")
     else
-      render action: 'index'
+      flash.now.alert = "Please fill all fields."
+      render :index
     end
   end
-  private
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def message_params
-      params.require(:message).permit!
-    end
 end

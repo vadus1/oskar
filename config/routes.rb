@@ -1,6 +1,6 @@
 Oskar::Application.routes.draw do
   root 'home#index'
 
-  post 'contact', to: 'home#create'
+  match 'contact' => 'home#create', :as => 'contact', :via => :post
   resources :galleries
 end
