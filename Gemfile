@@ -28,6 +28,7 @@ gem 'mail_form'
 #Загрузка и обработка файлов
 gem 'mini_magick'
 gem 'carrierwave'
+gem "fog"
 gem 'haml-rails'
 gem 'prettyphoto-rails'
 gem 'airbrake'
