@@ -3,9 +3,9 @@
   %header.clearfix
     .img-circle
       %img.decore-top{:alt => "", :src => "#{asset_path('decor-1.png')}"}
-        %h1 Wedding agency
-        %h3 Oskar
-        %h4 On November, Saturday, 21, 2014
+        %h1 Oskar
+        %h3 Свадебное агенство
+        %h4
         %img.decore-bottom{:alt => "", :src => "#{asset_path('decor-3.png')}"}
     / <img class="logo" src="assets/img/logo3.png">
 / end: header
@@ -13,7 +13,7 @@
 / start: welcome
 .welcome-wrap
   .container
-    %h2 Welcome to our site.
+    %h2 Добро пожаловать на наш сайт.
 / end: welcome
 
 / start: about us
@@ -21,8 +21,16 @@
   %a#about
   .container
     .page-header
-      %h1 About Us
-    %h2.slogan Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor consectetur.
+      %h1 О нас
+    %h2.slogan
+      %p
+        Мы очень рады приветствовать Вас на сайте нашего агентства! Наверное, у Вас скоро свадьба? Вы в растерянности и не знаете с чего начать?
+      %p
+        Свадебное агентство «Oskar» - Это Ваш партнер и помощник в организации свадебного торжества!
+      %p
+        Наша цель - превратить Ваши мечты и желания в реальность!
+      %p
+        Основная задача - сделать Вашу свадьбу, ярким и незабываемым днем! Подарить Вам спокойствие и отличное настроение на празднике!
     .row-fluid
       .span4
         %h3 About Mary
@@ -40,12 +48,12 @@
           Vestibulum pellentesque, leo eget gravida convallis, nunc nulla tempus leo, in pharetra dui purus quis ligula. Fusce eu odio neque.
           Curabitur nec purus sit amet tortor bibendum interdum a eu eros.
 / end: about us
-%a#gallery
 .gallery-pre
   .container
     .page-header
-      %h1 Gallery
-    %h2.slogan Our Wedding Gallery Images
+      %a#gallery
+      %h1 Галлерея
+    %h2.slogan Наша свадебная галлерея.
 
 .gallery
   .container
@@ -60,13 +68,14 @@
                 %a.ico_zoom.prettyPhoto{:href => "#{photo.image.url}", :rel => 'prettyPhoto'}
                   %span
     / end: Gallery
-    %a#wedding
 / start: wedding-pre
 .wedding-pre
   .container
     .page-header
-      %h1 Wedding Party
-    %h2.slogan Our Wedding Information
+      %a#wedding
+      %h1 Информация
+    %h2.slogan 
+      %b Мы несем полную ответственность за качество предоставляемых услуг!!! 
 / end: wedding-pre
 
 / start: wedding
@@ -74,47 +83,92 @@
   .container
     .row-fluid
       .span6
-        %h2 Ceremony
-        %p
-          Curabitur pretium eleifend ligula in hendrerit sapien
+        %h2 Почему Вы должны выбрать именно нас!
+        %ul
+          %li Мы дадим Вам 100% гарантию Вашего спокойствия в день свадьбы!
           %br
-            %b On November, Saturday, 21, 2014
-            at
-            %b 2:00 p.m.
-            %br
-              Cum sociis natoque penatibus et magnis dis parturient montes:
-              %br
-                %b In iaculis sem nec quam dignissim ornare.
+          %li Мы работаем только с профессионалами!
+          %br
+          %li Мы организовываем и создаем свадьбы, только исходя из Ваших пожеланий и предпочтений!
+          %br
+          %li Мы делаем свою работу быстро и качественно!
+          %br
+          %li Индивидуальный подход к каждой паре!
+        %br
+        %p{ style: "text-align: left;"}
+          Организация свадеб - это для нас, в первую очередь, любимое дело, которым мы живем и, от которого, мы получаем только позитивные эмоции!!! 
       .span6
-        %h2 Reception
-        %p
-          Curabitur pretium eleifend ligula, in hendrerit sapien lobortis eget.
-          Quisque egestas nunc id libero hendrerit sit amet lobortis ipsum.
-          fermentum. Curabitur sapien mauris, porttitor vitae.
-        %p Nullam eget pellentesque sapien!
-  %a#venue
+        %h2 Услуги
+        %br
+        %b Мы продумаем все до мелочей:
+        #list
+          %ul
+            %li индивидуальный стиль для Вашей свадьбы;
+            %br
+            %li подбор ресторана, усадьбы;
+            %br
+            %li фотограф, видеооператор,
+            %br
+            %li ведущий, артисты;
+            %br
+            %li выездная регистрация; 
+            %br
+            %li оформление зала, подбор цветовой гаммы, аксессуары;
+            %br
+            %li свадебная полиграфия;
+            %br
+            %li координация свадьбы;
+            %br
+            %li подбор автомобилей для свадебного кортежа;
+            %br
+            %li визажист, парикмахер, стилист;
+            %br
+            %li выбор свадебного торта;
+            %br
+            %li кейтеринг ;
+            %br
+            %li оформление фотозоны;
+            %br
+            %li флористика (свадебный букет, оформление свадьбы живыми цветами) и многое другое!!!
+    .row-fluid
+      .span8.offset2
+        %br
+        %h2 Стоимость
+        %br
+        %p{ style: "text-align: left"}
+          * Полная организация свадьбы - для тех пар, которые  решили организовать  свадьбу, с помощь профессиональной команды! В данный пакет входят:
+        %br
+        %ul.offset1
+          %li
+            Свадебный организатор, который начинает с Вами работать с момента подписания договора. Это Ваш личный гид в свадебном мире!
+          %br
+          %li 
+            2 свадебных координатора -  БЕСПЛАТНО (работают на свадебной площадке в свадебный день).
+        %br
+        %p{ style: "text-align: left"}
+          Комиссия нашего агентства в данном случае составляет 10% от общей сметы (аренда свадебной площадки и меню, не включаются в смету).
+        %br
+        %p{ style: "text-align: left"}
+          * При заказе двух и более услуг – комиссия так же 10% от общей сумма Вашего заказа.
+        %br
+        %p{ style: "text-align: left"}
+          * Если же Вы решили организовать свадьбу самостоятельно  и воспользоваться только отдельной услугой нашего агентства, то в этом случае, комиссия составит - 400 000 бел. рублей. 
 / end: wedding
 
 / start: contact
 .contact
   .container
     .page-header
-      %h1 Venue
-    %h2.slogan Ut eleifend malesuada quam vel dictum odio pellentesque sit amet.
+      %h1 Контакты
+    %a#venue
+    %h2.slogan Звоните прямо сейчас! Мы с удовольствием ответим на все Ваши вопросы!
     .row-fluid
       .span4.info
-        %h4 Wedding Address
+        %h4 Телефон:
         %p
-          The Quisque Donec Inc.
-          %br 9090 Quisque Lectus, Curabitur, E11.
-        %h4 Telephone
-        %p
-          Mary: +12 345 6789 10
-          %br Troy: +12 345 6789 10
-        %h4 Residence Address
-        %p
-          The Quisque Donec Inc.
-          %br 9090 Quisque Lectus, Curabitur, E11.
+          +375 33 606-37-26
+          &nbsp;
+          %img.decore-top{alt:"", src: "#{asset_path('mts.gif')}", width: 50}
       .span8.form
         = simple_form_for @message, :url => contact_path do |f|
           %fieldset

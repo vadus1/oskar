@@ -1,11 +1,10 @@
-@import url('http://fonts.googleapis.com/css?family=Merienda:400,700');
 /* ========================================================================== */
 /* Global properties (body, common classes, vertical rhythm, structure etc)
 /* ========================================================================== */
 body {
   position: relative;
   background-color: #e8e8e8;
-  font-family: 'Merienda', cursive;
+  font-family: 'monotype_corsiva', cursive;
   font-size: 16px;
   padding-top: 60px;
 }
@@ -147,7 +146,7 @@ hr {
 /* ========================================================================== */
 .header-wrap {
   width: 100%;
-  background: url('image1-92513b76d9c804ac1643eeeb5f5b25f5.jpg') no-repeat center center fixed;
+  background: url('image1.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -182,7 +181,7 @@ hr {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  background-image: url('o50-bdea99481cb019fe098fcc564264dd24.png');
+  background-image: url('o50.png');
   background-repeat: repeat;
 }
 @media (max-width: 640px) {
@@ -212,7 +211,7 @@ hr {
   }
 }
 .header-wrap .img-circle h3 {
-  background: url('decor-4-660591e44e16dd6b3192092cc458ee78.png') no-repeat center center;
+  background: url('decor-4.png') no-repeat center center;
   color: #555555;
   padding: 15px 0;
   font-size: 18px;
@@ -274,7 +273,7 @@ hr {
 /* About US
 /* ========================================================================== */
 .about-us {
-  background: #ec5a2b url('noise-88873353ce0827a932d4870cb47e2b02.png') 50% 0;
+  background: #ec5a2b url('noise.png') 50% 0;
   padding-top: 30px;
   padding-bottom: 30px;
   color: #ffffff;
@@ -328,12 +327,16 @@ hr {
   color: #ffffff;
   text-shadow: 1px 1px 0 #a4340e;
 }
+.about-us .slogan p{
+  text-align: left;
+  padding-bottom: 20px;
+}
 /* ========================================================================== */
 /* Gallery
 /* ========================================================================== */
 .gallery-pre {
   width: 100%;
-  background: url('image2-de6bebf39094a3a820bbf5452052de62.jpg') no-repeat center center fixed;
+  background: url('image2.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -403,7 +406,7 @@ hr {
 /* ========================================================================== */
 .gallery {
   padding: 30px 0;
-  background: #f4f0e5 url('noise-88873353ce0827a932d4870cb47e2b02.png') 50% 0;
+  background: #f4f0e5 url('noise.png') 50% 0;
 }
 @media (max-width: 767px) {
   .gallery > .container {
@@ -620,9 +623,21 @@ hr {
 /* Wedding
 /* ========================================================================== */
 .wedding {
-  background: #d6eaeb url('noise-88873353ce0827a932d4870cb47e2b02.png') 50% 0;
+  background: #d6eaeb url('noise.png') 50% 0;
   padding: 60px 0;
   text-align: center;
+}
+.wedding ul li{
+  text-align: left;
+}
+#list ul{
+  list-style: none inside;
+}
+
+#list ul>li:before{
+  content: "\2043";
+  margin-left: -1ex;
+  margin-right: 1ex;
 }
 @media (max-width: 767px) {
   .wedding > .container {
@@ -635,7 +650,7 @@ hr {
 }
 .wedding-pre {
   width: 100%;
-  background: url('image3-54e4b5181484bb87ed2dfdf07c22720e.jpg') no-repeat center center fixed;
+  background: url('image3.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -679,7 +694,7 @@ hr {
 /* ========================================================================== */
 .contact {
   padding: 30px 0;
-  background: #333333 url('noise-88873353ce0827a932d4870cb47e2b02.png') 50% 0;
+  background: #333333 url('noise.png') 50% 0;
   color: #f4f0e5;
 }
 @media (max-width: 767px) {

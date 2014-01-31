@@ -30,6 +30,7 @@ gem 'mini_magick'
 gem 'carrierwave'
 gem 'haml-rails'
 gem 'prettyphoto-rails'
+gem 'airbrake'
 #Формы
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 

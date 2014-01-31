@@ -6,6 +6,7 @@
     %title Свадебное агенство Oskar
     = stylesheet_link_tag :application, :media => "all"
     = javascript_include_tag :application
+    = airbrake_javascript_notifier
     = csrf_meta_tags
   %body#home{"data-twttr-rendered" => "true"}
     = render 'layouts/navigations'
