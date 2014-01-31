@@ -146,7 +146,7 @@ hr {
 /* ========================================================================== */
 .header-wrap {
   width: 100%;
-  background: url('image1.jpg') no-repeat center center fixed;
+  background: url("#{asset_path('image1.jpg')}") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -181,7 +181,7 @@ hr {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  background-image: url('o50.png');
+  background-image: url("#{asset_path('o50.png')}");
   background-repeat: repeat;
 }
 @media (max-width: 640px) {
@@ -211,7 +211,7 @@ hr {
   }
 }
 .header-wrap .img-circle h3 {
-  background: url('decor-4.png') no-repeat center center;
+  background: url("#{asset_path('decor-4.png')}") no-repeat center center;
   color: #555555;
   padding: 15px 0;
   font-size: 18px;
@@ -273,7 +273,7 @@ hr {
 /* About US
 /* ========================================================================== */
 .about-us {
-  background: #ec5a2b url('noise.png') 50% 0;
+  background: #ec5a2b url("#{asset_path('noise.png')}") 50% 0;
   padding-top: 30px;
   padding-bottom: 30px;
   color: #ffffff;
@@ -336,7 +336,7 @@ hr {
 /* ========================================================================== */
 .gallery-pre {
   width: 100%;
-  background: url('image2.jpg') no-repeat center center fixed;
+  background: url("#{asset_path('image2.jpg')}") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -406,7 +406,7 @@ hr {
 /* ========================================================================== */
 .gallery {
   padding: 30px 0;
-  background: #f4f0e5 url('noise.png') 50% 0;
+  background: #f4f0e5 url("#{asset_path('noise.png')}") 50% 0;
 }
 @media (max-width: 767px) {
   .gallery > .container {
@@ -475,7 +475,7 @@ hr {
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  background-image: url("o20.png");
+  background-image: url("#{asset_path('o20.png')}");
   background-repeat: repeat;
 }
 .hover:hover img {
@@ -623,7 +623,7 @@ hr {
 /* Wedding
 /* ========================================================================== */
 .wedding {
-  background: #d6eaeb url('noise.png') 50% 0;
+  background: #d6eaeb url("#{asset_path('noise.png')}") 50% 0;
   padding: 60px 0;
   text-align: center;
 }
@@ -650,7 +650,7 @@ hr {
 }
 .wedding-pre {
   width: 100%;
-  background: url('image3.jpg') no-repeat center center fixed;
+  background: url("#{asset_path('image3.jpg')}") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -694,7 +694,7 @@ hr {
 /* ========================================================================== */
 .contact {
   padding: 30px 0;
-  background: #333333 url('noise.png') 50% 0;
+  background: #333333 url("#{asset_path('noise.png')}") 50% 0;
   color: #f4f0e5;
 }
 @media (max-width: 767px) {
