@@ -57,6 +57,5 @@ end
 
 group :production do
   gem 'unicorn'
-  gem 'therubyracer', platforms: :ruby
   gem 'newrelic_rpm'
 end
