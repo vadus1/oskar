@@ -6,5 +6,5 @@
 # For example, setting:
 # GMAIL_USERNAME: 'Your_Gmail_Username'
 # makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
-AWS_KEY: ''
-AWS_SECRET: ''
+AWS_KEY: 'AKIAJA2BWPHQYGPLLNEA'
+AWS_SECRET: 'DzoIqe4jm6Ldv5as69DGoLtXzsH0gSneMYtNF8IO'
