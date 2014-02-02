@@ -1,12 +1,7 @@
 / start: header
 .header-wrap
   %header.clearfix
-    .img-circle
-      %img.decore-top{:alt => "", :src => "#{asset_path('decor-1.png')}"}
-        %h1 Oskar
-        %h2 Свадебное агентство
-        %h4
-        %img.decore-bottom{:alt => "", :src => "#{asset_path('decor-3.png')}"}
+
 / end: header
 
 / start: welcome
@@ -32,20 +27,10 @@
         Основная задача - сделать Вашу свадьбу, ярким и незабываемым днем! Подарить Вам спокойствие и отличное настроение на празднике!
     .row-fluid
       .span4
-        %h3 About Mary
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis, mi non sollicitudin dapibus, turpis nunc suscipit lorem.
-        %p
-          Vestibulum pellentesque, leo eget gravida convallis, nunc nulla tempus leo, in pharetra dui purus quis ligula. Fusce eu odio neque.
-          Curabitur nec purus sit amet tortor bibendum interdum a eu eros.
       .span4.image-span
         .image-inner
           = image_tag('image4.jpg', class: "img-circle")
       .span4
-        %h3 About Troy
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis, mi non sollicitudin dapibus, turpis nunc suscipit lorem.
-        %p
-          Vestibulum pellentesque, leo eget gravida convallis, nunc nulla tempus leo, in pharetra dui purus quis ligula. Fusce eu odio neque.
-          Curabitur nec purus sit amet tortor bibendum interdum a eu eros.
 / end: about us
 .gallery-pre
   .container
